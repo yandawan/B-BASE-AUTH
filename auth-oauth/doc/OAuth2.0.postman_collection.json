@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "bbe35170-8cfb-4721-b5e6-91e9e30ac385",
+		"name": "OAuth2.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "申请令牌-oauth-server",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:53020/sso/oauth/token?username=zhangsan&password=123&grant_type=password&client_id=appClient&client_secret=123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "53020",
+					"path": [
+						"sso",
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "zhangsan"
+						},
+						{
+							"key": "password",
+							"value": "123"
+						},
+						{
+							"key": "grant_type",
+							"value": "password"
+						},
+						{
+							"key": "client_id",
+							"value": "appClient"
+						},
+						{
+							"key": "client_secret",
+							"value": "123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "校验令牌-oauth-server",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:53020/sso/oauth/check_token?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXV0aC1hcGkiLCJvcmRlci1hcGkiXSwidXNlcl9uYW1lIjoie1wiZnVsbE5hbWVcIjpcInpoYW5nc2FuXCIsXCJpZFwiOlwiMVwiLFwicGFzc3dvcmRcIjpcIiQyYSQxMCRhRnNPRnp1anRQQ25VQ1VLY296c0h1eDByUS8zZmFBSEdGU1ZiOVkuQjFudHBtRWhqUnRydVwiLFwidXNlcm5hbWVcIjpcInpoYW5nc2FuXCJ9Iiwic2NvcGUiOlsiYXBwIl0sImV4cCI6MTYwMDI1MTY2OSwiYXV0aG9yaXRpZXMiOlsiZ2V0T3JkZXJCeUlkIiwiZ2V0T3JkZXJCeUlkVXNlckxpc3QiXSwianRpIjoiNTc5NWJmY2QtOTM4Ny00OTgzLWI3NGUtMWU5Yjc0YzMzOTFjIiwiY2xpZW50X2lkIjoiYXBwQ2xpZW50In0.uAwreFLQKqFVXAKBdnksHk1YyIgK6tubpC9OHW3W9S4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "53020",
+					"path": [
+						"sso",
+						"oauth",
+						"check_token"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXV0aC1hcGkiLCJvcmRlci1hcGkiXSwidXNlcl9uYW1lIjoie1wiZnVsbE5hbWVcIjpcInpoYW5nc2FuXCIsXCJpZFwiOlwiMVwiLFwicGFzc3dvcmRcIjpcIiQyYSQxMCRhRnNPRnp1anRQQ25VQ1VLY296c0h1eDByUS8zZmFBSEdGU1ZiOVkuQjFudHBtRWhqUnRydVwiLFwidXNlcm5hbWVcIjpcInpoYW5nc2FuXCJ9Iiwic2NvcGUiOlsiYXBwIl0sImV4cCI6MTYwMDI1MTY2OSwiYXV0aG9yaXRpZXMiOlsiZ2V0T3JkZXJCeUlkIiwiZ2V0T3JkZXJCeUlkVXNlckxpc3QiXSwianRpIjoiNTc5NWJmY2QtOTM4Ny00OTgzLWI3NGUtMWU5Yjc0YzMzOTFjIiwiY2xpZW50X2lkIjoiYXBwQ2xpZW50In0.uAwreFLQKqFVXAKBdnksHk1YyIgK6tubpC9OHW3W9S4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "申请令牌-gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:53010/sso/oauth/token?username=zhangsan&password=123&grant_type=password&client_id=appClient&client_secret=123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "53010",
+					"path": [
+						"sso",
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "zhangsan"
+						},
+						{
+							"key": "password",
+							"value": "123"
+						},
+						{
+							"key": "grant_type",
+							"value": "password"
+						},
+						{
+							"key": "client_id",
+							"value": "appClient"
+						},
+						{
+							"key": "client_secret",
+							"value": "123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "访问资源",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsib3JkZXItYXBpIiwiYXV0aC1zc28tYXBpIl0sInVzZXJfbmFtZSI6IntcImZ1bGxOYW1lXCI6XCJ6aGFuZ3NhblwiLFwiaWRcIjpcIjFcIixcInBhc3N3b3JkXCI6XCIkMmEkMTAkYUZzT0Z6dWp0UENuVUNVS2NvenNIdXgwclEvM2ZhQUhHRlNWYjlZLkIxbnRwbUVoalJ0cnVcIixcInVzZXJuYW1lXCI6XCJ6aGFuZ3NhblwifSIsInNjb3BlIjpbImFwcCJdLCJleHAiOjE2MDAyNTIxMTIsImF1dGhvcml0aWVzIjpbImdldE9yZGVyQnlJZCIsImdldE9yZGVyQnlJZFVzZXJMaXN0Il0sImp0aSI6IjNlOWU4YWE0LWU0ZjAtNDVkNi04YmU4LWZjMzU3YjM0MWU0YSIsImNsaWVudF9pZCI6ImFwcENsaWVudCJ9.-JKPdNbmJK0dnEhr6z4oAcc1ZxGKoLZxCKUt4PdowUg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:53010/order/getOrderById",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "53010",
+					"path": [
+						"order",
+						"getOrderById"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

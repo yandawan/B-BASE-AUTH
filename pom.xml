@@ -8,5 +8,13 @@
     <artifactId>B-BASE-AUTH</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
+    <packaging>pom</packaging>
+    <modules>
+        <module>auth-spring-mvc</module>
+        <module>auth-spring-security</module>
+        <module>auth-spring-boot-security</module>
+        <module>auth-oauth</module>
+        <module>auth-jwt</module>
+        <module>auth-spring-security-jwt</module>
+    </modules>
 </project>

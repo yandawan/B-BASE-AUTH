@@ -1,0 +1,21 @@
+server:
+  port: 7003
+spring:
+  application:
+    name: jwtspringcloud
+
+##jwt配置
+config:
+  jwt:
+    # 代表这个JWT的接收对象,存入audience
+    clientId: app
+    # 密钥
+    secret: df45adfa56f
+    # JWT的签发主体，存入issuer
+    name: youfanshop
+    # 过期时间，时间戳
+    expire: 172800
+    # 请求头
+    tokenHeaderKey: Authorization
+    # token 前缀,注意后面有空格
+    tokenPrefix: Bearer
